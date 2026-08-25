@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CALL CENTER</title>
+<meta name="description" content="The line is always open.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Cpath d='M50 88 L14 26 L86 26 Z M50 88 L86 62 L14 62 Z' fill='none' stroke='%23c1121f' stroke-width='4'/%3E%3Ccircle cx='50' cy='52' r='42' fill='none' stroke='%238b0000' stroke-width='4'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ================= BACKGROUND FILM ================= -->
+<div class="bg" aria-hidden="true">
+  <video class="bg__video" id="bgvid" src="video/background.mp4"
+         autoplay loop muted playsinline preload="auto"></video>
+  <div class="bg__tint"></div>
+</div>
+
+<!-- ================= ATMOSPHERE ================= -->
+<div class="fog" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ================= CURSOR ================= -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__ring"></div>
+  <div class="cursor__dot"></div>
+</div>
+
+<!-- ================= GATE ================= -->
+<div class="gate" id="gate">
+  <div class="gate__inner">
+    <div class="gate__sigil" id="gateSigil"></div>
+    <p class="gate__kicker">YOU HAVE REACHED</p>
+    <h1 class="gate__title">CALL&nbsp;CENTER</h1>
+    <p class="gate__line">THE LINE IS ALWAYS OPEN</p>
+    <button class="gate__btn" id="enterBtn" type="button">
+      <span>ENTER</span>
+    </button>
+    <p class="gate__warn">DO NOT CALL BACK</p>
+  </div>
+</div>
+
+<!-- ================= SITE ================= -->
+<div class="site" id="site" aria-hidden="true">
+
+  <header class="hero" id="hero">
+    <div class="hero__mark" id="heroSigil"></div>
+    <h1 class="hero__title" data-text="CALL CENTER">CALL CENTER</h1>
+    <div class="rule"><i></i><b>&#9768;</b><i></i></div>
+    <p class="hero__creed">THE LINE IS ALWAYS OPEN.</p>
+    <p class="hero__sub"><span id="heroSeats">TEN</span> SEATS &middot; ONE VOICE &middot; NO RECORD</p>
+    <a class="hero__scroll" href="#order"><span>DESCEND</span><i></i></a>
+  </header>
+
+  <main>
+    <section class="order" id="order">
+      <div class="sec-head reveal">
+        <p class="sec-head__kicker">SECTION I</p>
+        <h2 class="sec-head__title">THE ORDER</h2>
+        <p class="sec-head__note" id="secNote">Ten names entered into the register. Each one answered.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="creed reveal">
+      <div class="rule wide"><i></i><b>&#9768;</b><i></i></div>
+      <p class="creed__text">&ldquo;We do not ring twice.&rdquo;</p>
+      <div class="rule wide"><i></i><b>&#9768;</b><i></i></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__sigil" id="footSigil"></div>
+    <p class="foot__name">CALL CENTER</p>
+    <p class="foot__meta"><span id="year">MMXXVI</span> &middot; ALL LINES MONITORED</p>
+  </footer>
+</div>
+
+<!-- ================= OVERLAY ================= -->
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="ovAlias">
+  <div class="ov__backdrop" data-close></div>
+  <article class="ov__panel">
+    <button class="ov__close" id="ovClose" type="button" aria-label="Close">&times;</button>
+    <div class="ov__sigil" id="ovSigil"></div>
+    <p class="ov__file" id="ovFile">FILE #000</p>
+    <h3 class="ov__alias" id="ovAlias">&mdash;</h3>
+    <div class="ov__tags">
+      <span class="tag tag--rank" id="ovRank">&mdash;</span>
+      <span class="tag tag--status" id="ovStatus">&mdash;</span>
+    </div>
+    <div class="ov__rows">
+      <div class="row"><span>ALIAS</span><b id="ovAlias2">&mdash;</b></div>
+      <div class="row"><span>RANK</span><b id="ovRank2">&mdash;</b></div>
+      <div class="row"><span>STATUS</span><b id="ovStatus2">&mdash;</b></div>
+      <div class="row"><span>REGISTER</span><b id="ovFile2">&mdash;</b></div>
+    </div>
+    <div class="ov__redact">
+      <p class="ov__redact-label">&#9608;&#9608;&#9608; CLASSIFIED &#9608;&#9608;&#9608;</p>
+      <p class="bar" style="--w:96%"></p>
+      <p class="bar" style="--w:78%"></p>
+      <p class="bar" style="--w:88%"></p>
+      <p class="bar" style="--w:41%"></p>
+    </div>
+  </article>
+</div>
+
+<!-- ================= SOUND ================= -->
+<button class="snd" id="sndBtn" type="button" aria-label="Toggle sound" title="Sound">
+  <span class="snd__bars"><i></i><i></i><i></i></span>
+  <span class="snd__label" id="sndLabel">SILENT</span>
+</button>
+
+<script src="js/sigil.js"></script>
+<script src="js/members.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

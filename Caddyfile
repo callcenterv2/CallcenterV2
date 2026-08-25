@@ -1,0 +1,10 @@
+:80 {
+    root * .
+    encode gzip zstd
+
+    route {
+        @hidden path /server/* /*.bat /*.md /*.conf /Caddyfile
+        respond @hidden 404
+        file_server
+    }
+}
