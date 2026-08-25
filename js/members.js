@@ -26,5 +26,8 @@ var MEMBERS = [
   { alias: 'SHINOBI',      rank: 'MANAGEMENT', status: 'ACTIVE', img: 'img/shinobi.png' },
 
   { alias: 'ONYX',         rank: 'SPIELER',    status: 'ACTIVE', img: 'img/onyx.png' },
-  { alias: 'GOTTESAUGE',   rank: 'SPIELER',    status: 'ACTIVE', img: 'img/gottesauge.png' }
+  { alias: 'GOTTESAUGE',   rank: 'SPIELER',    status: 'ACTIVE', img: 'img/gottesauge.png' },
+  { alias: 'CODEROUTE',    rank: 'SPIELER',    status: 'ACTIVE', img: 'img/coderoute.png' },
+  // renders as N̷o̷t̷a̷r̷z̷t̷ (struck-through)
+  { alias: 'N̷o̷t̷a̷r̷z̷t̷', rank: 'SPIELER',    status: 'ACTIVE', img: 'img/notarzt.jpg' }
 ];
